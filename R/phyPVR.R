@@ -122,10 +122,10 @@ phyPVR<- function(x, phy = NULL, trait = NULL, envVar = NULL, method = "lamdba",
 
 lambdaTest1 <- function(x, vcv){
   lambda.max <- max(vcv)/max(vcv[lower.tri(vcv)])
-  #opt <- suppressWarnings(
-   # optimize(pagelLogLik, interval=c(0,0.1, lambda.max), xr = x, vcvr = vcv, maximum = TRUE)
-  #)
-  Lambda <- lambda.max#opt$maximum
+  opt <- suppressWarnings(
+    optimize(pagelLogLik, interval=c(0,0.1, lambda.max), xr = x, vcvr = vcv, maximum = TRUE)
+  )
+  Lambda <- opt$maximum
   logL0 <- pagelLogLik(0, x, vcv)
   pvalue <- as.numeric(pchisq(2 * (opt$objective - logL0), df = 1, lower.tail = FALSE))
 
