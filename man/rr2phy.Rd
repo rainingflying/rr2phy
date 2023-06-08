@@ -2,7 +2,7 @@
 \alias{rr2phy}
 \docType{package}
 \title{
-Computes \bold{P}hylogenetic eigen\bold{V}ectors \bold{R}egression and \bold{P}hylogentic \bold{S}ignal-\bold{R}epresentation curve (with null and neutral expectations).
+Computes Phylogenetic eigen Vectors Regression and evalute the effects of evolution and environment on plant traits using lambda method.
 }
 \description{
 the varation decoposition of phylogeny and adapation enviroment condition
