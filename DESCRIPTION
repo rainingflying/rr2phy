@@ -2,7 +2,7 @@ Package: rr2phy
 Type: Package
 Title: the variation decomposition of Phylogenetic trait and adapted envieonment 
 Version: 0.1.0
-Author: Wuchao Gao;Qi li
+Author: Wuchao Gao; Qi li
 Maintainer: Wuchao Gao <sichuangwc@gmail.com>
 Description: Estimates (and controls for) phylogenetic signal through phylogenetic eigenvectors regression (PVR) and phylogenetic signal-representation (PSR) curve, along with some plot utilities.
 License: PL (>= 2)
