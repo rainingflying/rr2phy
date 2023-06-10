@@ -19,6 +19,7 @@ License: \tab GPL >= 2\cr
 }
 \author{
 Wuchao gao; Qi li
+  
 Maintainer: Wuchao gao <sichuangwc@gmail.com>
 }
 \references{
