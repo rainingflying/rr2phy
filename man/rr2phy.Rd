@@ -47,7 +47,8 @@ envvar <- rnorm(10,2,0.05)
 phyPVR(x, trait = trait, envVar = envvar, method = "lambda")
 ##Evaluate the relative importance of species trait in phylogeny and multiple environment factors
 tree <- rcoal(10)
-x <- PVRdecomp(tree) trait <- rnorm(10,1,0.01)
+x <- PVRdecomp(tree)  
+trait <- rnorm(10,1,0.01)
 envvar <- matrix(rnorm(100,2,0.1), nrow = 10, ncol = 10)
 phyPVR(x, trait = trait, envVar = envvar, method = "lambda")
 }
