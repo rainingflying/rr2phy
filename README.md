@@ -2,20 +2,35 @@
 the rr2phy packages mianly provides the lambda method for selecting the optimal phylogenetic eigenvectors and allows for the direct evaluation of the effects of evolution and environment on plant traits.The phylogenetic eigenvector regression (PVR) starts by performing an eigendecomposition of a pairwise double-centered phylogenetic distance matrix between species. The eigenvectors estimated values express phylogenetic trends in data and residuals express independent evolution of each species. 
 ## To install the rr2phy packages from Github using devtools:
 library(devtools)   
+
 devtools::install_github("rainingflying/rr2phy")
+
 library(rr2phy)
+
 library(rdacca.hp)
+
 ##Evaluate the relative importance of species trait in phylogeny and a single environment factor
+
 tree <- rcoal(10)
+
 x <- PVRdecomp(tree)
+
 trait <-  rnorm(10,1,0.01)
+
 envvar <- rnorm(10,2,0.05)
+
 phyPVR(x, trait = trait, envVar = envvar, method = "lambda")
+
 ##Evaluate the relative importance of species trait in phylogeny and multiple environment factors
+
 tree <- rcoal(10)
+
 x <- PVRdecomp(tree)
+
 trait <-  rnorm(10,1,0.01)
+
 envvar <-  matrix(rnorm(100,2,0.1), nrow = 10, ncol = 10)
+
 phyPVR(x, trait = trait, envVar = envvar, method = "lambda")
 
 NOTE: this packages is only installing from github
