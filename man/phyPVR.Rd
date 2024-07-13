@@ -9,7 +9,7 @@ Phylogenetic eigenvectors regression with lambda method.
 The phylogenetic eigenvector regression (PVR) starts by performing an eigendecomposition of a pairwise double-centered phylogenetic distance matrix between species. The eigenvectors (representing the traits under analysis) estimated values express phylogenetic trends in data and residuals express independent evolution of each species.
 }
 \usage{
-phyPVR(x, phy = NULL, trait = NULL, envVar = NULL, method = "lamdba", weights = NULL, scaled = FALSE, sig = TRUE, sig.t = 0.05, lamdba.t = 0.05, psr.t = 0.01, accvalue.t = 0.9, ...)
+phyPVR(x, phy = NULL, trait = NULL, envVar = NULL, method = "Moran.I", weights = NULL, scaled = FALSE, sig = TRUE, sig.t = 0.05, lamdba.t = 0.05, psr.t = 0.01, accvalue.t = 0.9, ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -30,7 +30,7 @@ Character string. A name for the eigenvectors selection method. It can be "lambd
 }
 
   \item{sig}{
-Logical. Should the eigenvectors selected by the "lamdba" method be selected by the significance of residuals autocorrelation. If FALSE the eigenvectors will be selected by Moran's I values.
+Logical. Should the eigenvectors selected by the "Moran.I" method be selected by the significance of residuals autocorrelation. If FALSE the eigenvectors will be selected by Moran's I values.
 }
   \item{sig.t}{
 The significance treshold used to select eigenvectors by the "lamdba" method.
@@ -86,14 +86,14 @@ tree <- rcoal(10)
 x <- PVRdecomp(tree)
 trait <-  rnorm(10,1,0.01)  
 envvar <- rnorm(10,2,0.05)  
-phyPVR(x, trait = trait, envVar = envvar, method = "lambda")
+phyPVR(x, trait = trait, envVar = envvar, method = "Moran.I")
 
 ##Evaluate the relative importance of species trait in phylogeny and multiple environment factors  
 tree <- rcoal(10)  
 x <- PVRdecomp(tree)  
 trait <- rnorm(10,1,0.01)  
 envvar <- matrix(rnorm(100,2,0.1), nrow = 10, ncol = 10)  
-phyPVR(x, trait = trait, envVar = envvar, method = "lambda") 
+phyPVR(x, trait = trait, envVar = envvar, method = "Moran.I") 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):
