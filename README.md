@@ -14,19 +14,13 @@ tree <- rcoal(10)
 x <- PVRdecomp(tree)  
 trait <-  rnorm(10,1,0.01)  
 envvar <- rnorm(10,2,0.05)  
-phyPVR(x, trait = trait, envVar = envvar, method = "Moran.I")    
-#test phylogenic siginal     
-exGeo1<-phylo4d(tree,tip.data =trait )    
-phyloSignal(exGeo1)    
+phyPVR(x, trait = trait, envVar = envvar, method = "Moran.I")     
 ##Evaluate the relative importance of species trait in phylogeny and multiple environment factors  
 tree <- rcoal(10)  
 x <- PVRdecomp(tree) 
 trait <-  rnorm(10,1,0.01)  
 envvar <-  matrix(rnorm(100,2,0.1), nrow = 10, ncol = 10)  
 phyPVR(x, trait = trait, envVar = envvar, method = "Moran.I")  
-#test phylogenic siginal     
-exGeo1<-phylo4d(tree,tip.data =trait )    
-phyloSignal(exGeo1)    
 ##test real data   
 library(caper)   
 data(shorebird)   
