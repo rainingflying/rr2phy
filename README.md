@@ -38,4 +38,3 @@ phyPVR(x, trait = shorebird$data$M.Mass, envVar = envvar, method = "Moran.I")
 exGeo1<-phylo4d(shorebird$phy,tip.data = shorebird$data$M.Mass)   
 phyloSignal(exGeo1)   
 #barplot.phylo4d(exGeo1)   
-NOTE: this packages is only installing from github
