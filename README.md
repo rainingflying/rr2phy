@@ -27,7 +27,7 @@ phyPVR(x, trait = trait, envVar = envvar, method = "Moran.I")
 #test phylogenic siginal     
 exGeo1<-phylo4d(tree,tip.data =trait )    
 phyloSignal(exGeo1)    
-##test real data
+##test real data   
 library(caper)   
 data(shorebird)   
 shorebird <- comparative.data(shorebird.tree, shorebird.data, Species, vcv=TRUE, vcv.dim=3)   
